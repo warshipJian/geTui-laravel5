@@ -2,7 +2,7 @@
 
 namespace WarshipJian\Getui\exception;
 
-use Couchbase\Exception;
+use Exception;
 /**
  * Created by PhpStorm.
  * User: Administrator

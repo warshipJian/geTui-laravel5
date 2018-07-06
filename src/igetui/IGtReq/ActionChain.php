@@ -2,6 +2,7 @@
 namespace WarshipJian\Getui\igetui\IGtReq;
 
 use WarshipJian\Getui\protobuf\PBMessage;
+use WarshipJian\Getui\protobuf\type\PBBool;
 class ActionChain extends PBMessage
 {
   var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;

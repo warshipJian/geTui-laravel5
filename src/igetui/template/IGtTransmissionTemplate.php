@@ -5,7 +5,7 @@ namespace WarshipJian\Getui\igetui\template;
 use WarshipJian\Getui\igetui\IGtReq\ActionChain;
 use WarshipJian\Getui\igetui\IGtReq\AppStartUp;
 use WarshipJian\Getui\protobuf\type\ActionChainType;
-use Couchbase\Exception;
+use Exception;
 use WarshipJian\Getui\igetui\IGtReq\NotifyInfo;
 
 class IGtTransmissionTemplate extends IGtBaseTemplate {

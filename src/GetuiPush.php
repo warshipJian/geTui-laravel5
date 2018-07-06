@@ -8,7 +8,7 @@ use WarshipJian\Getui\igetui\utils\GTconfig;
 use WarshipJian\Getui\igetui\IGtMessage;
 use WarshipJian\Getui\igetui\IGtListMessage;
 use WarshipJian\Getui\igetui\IGtTarget;
-use Couchbase\Exception;
+use Exception;
 use WarshipJian\Getui\igetui\utils\HttpManager;
 use WarshipJian\Getui\igetui\utils\ApiUrlRespectUtils;
 use WarshipJian\Getui\igetui\utils\LangUtils;

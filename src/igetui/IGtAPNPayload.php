@@ -2,7 +2,7 @@
 
 namespace WarshipJian\Getui\igetui;
 
-use Couchbase\Exception;
+use Exception;
 use RuntimeException;
 
 class IGtAPNPayload

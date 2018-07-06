@@ -6,7 +6,7 @@ use WarshipJian\Getui\igetui\IGtReq\PushInfo;
 use WarshipJian\Getui\igetui\IGtReq\Transparent;
 use WarshipJian\Getui\igetui\IGtAPNPayload;
 use WarshipJian\Getui\igetui\DictionaryAlertMsg;
-use Couchbase\Exception;
+use Exception;
 //require_once(dirname(__FILE__) . '/' . '../utils/ApnsUtils.php');
 //require_once(dirname(__FILE__) . '/' . '../IGt.APNPayload.php');
 

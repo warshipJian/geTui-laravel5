@@ -5,8 +5,8 @@ namespace WarshipJian\Getui\protobuf;
 use WarshipJian\Getui\protobuf\encoding\base128varint;
 use WarshipJian\Getui\protobuf\reader\PBInputStringReader;
 use WarshipJian\Getui\protobuf\type\PBString;
-use Couchbase\Exception;
 use WarshipJian\Getui\protobuf\type\PBInt;
+use Exception;
 
 /**
  * Including of all files needed to parse messages

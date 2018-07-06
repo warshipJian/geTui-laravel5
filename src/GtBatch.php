@@ -2,7 +2,7 @@
 
 namespace WarshipJian\Getui;
 
-use Couchbase\Exception;
+use Exception;
 use WarshipJian\Getui\igetui\IGtReq\SingleBatchItem;
 use WarshipJian\Getui\igetui\utils\GTConfig;
 use WarshipJian\Getui\igetui\IGtReq\SingleBatchRequest;

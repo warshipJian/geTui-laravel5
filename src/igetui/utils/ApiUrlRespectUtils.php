@@ -2,7 +2,7 @@
 
 namespace WarshipJian\Getui\igetui\utils;
 
-use Couchbase\Exception;
+use Exception;
 //require_once(dirname(__FILE__) . '/' . 'HttpManager.php');
 class ApiUrlRespectUtils
 {

@@ -1,7 +1,7 @@
 <?php
 
 namespace WarshipJian\Getui\igetui\utils;
-use Couchbase\Exception;
+use Exception;
 use WarshipJian\Getui\exception\RequestException;
 
 //require_once(dirname(__FILE__) . '/' . 'LogUtils.php');
