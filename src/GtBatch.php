@@ -1,4 +1,12 @@
 <?php
+
+namespace WarshipJian\Getui;
+
+use Couchbase\Exception;
+use WarshipJian\Getui\igetui\IGtReq\SingleBatchItem;
+use WarshipJian\Getui\igetui\utils\GTConfig;
+use WarshipJian\Getui\igetui\IGtReq\SingleBatchRequest;
+
 /**
  * Created by PhpStorm.
  * User: Administrator
@@ -6,9 +14,8 @@
  * Time: 下午3:45
  */
 header("Content-Type: text/html; charset=utf-8");
-require_once(dirname(__FILE__) . '/' . 'IGt.Push.php');
 
-class IGtBatch
+class GtBatch
 {
     var $batchId;
     var $innerMsgList = array();

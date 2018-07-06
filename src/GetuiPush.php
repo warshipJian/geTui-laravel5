@@ -8,20 +8,13 @@ use WarshipJian\Getui\igetui\utils\GTconfig;
 use WarshipJian\Getui\igetui\IGtMessage;
 use WarshipJian\Getui\igetui\IGtListMessage;
 use WarshipJian\Getui\igetui\IGtTarget;
-
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.LinkTemplate.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.NotificationTemplate.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.TransmissionTemplate.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.NotyPopLoadTemplate.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.APNTemplate.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/utils/GTConfig.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/utils/HttpManager.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/utils/ApiUrlRespectUtils.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/utils/LangUtils.php');
+use Couchbase\Exception;
+use WarshipJian\Getui\igetui\utils\HttpManager;
+use WarshipJian\Getui\igetui\utils\ApiUrlRespectUtils;
+use WarshipJian\Getui\igetui\utils\LangUtils;
 
 
-
-Class IGetuiPush
+Class GetuiPush
 {
     var $appkey; //第三方 标识
     var $masterSecret; //第三方 密钥
@@ -59,16 +52,16 @@ Class IGetuiPush
     {
         if($hosts == null || count($hosts) == 0)
         {
-            $hosts = isset(IGeTui::$appkeyUrlList[$this->appkey])?IGeTui::$appkeyUrlList[$this->appkey]:null;
+            $hosts = isset(GetuiPush::$appkeyUrlList[$this->appkey])?GetuiPush::$appkeyUrlList[$this->appkey]:null;
             if($hosts == null || count($hosts) == 0)
             {
                 $hosts = $this->getOSPushDomainUrlList($this->domainUrlList,$this->appkey);
-                IGeTui::$appkeyUrlList[$this->appkey] = $hosts;
+                GetuiPush::$appkeyUrlList[$this->appkey] = $hosts;
             }
         }
         else
         {
-            IGeTui::$appkeyUrlList[$this->appkey] = $hosts;
+            GetuiPush::$appkeyUrlList[$this->appkey] = $hosts;
         }
         $this->host = ApiUrlRespectUtils::getFastest($this->appkey, $hosts);
         return $this->host;
@@ -373,7 +366,7 @@ Class IGetuiPush
 
     public function getBatch()
     {
-        return new IGtBatch($this->appkey,$this);
+        return new GtBatch($this->appkey,$this);
     }
 
     public function pushAPNMessageToSingle($appId, $deviceToken, $message)
