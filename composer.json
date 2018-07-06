@@ -1,0 +1,15 @@
+{
+    "name": "guoyuanjian/ge-tui-laravel5",
+    "authors": [
+        {
+            "name": "warshipJian",
+            "email": "J.GY.jian@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "WarshipJian\\Getui\\": "src/"
+        }
+    }
+}
