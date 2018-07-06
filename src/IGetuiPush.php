@@ -4,20 +4,11 @@ namespace WarshipJian\Getui;
 
 header("Content-Type: text/html; charset=utf-8");
 
-use WarshipJian\Getui\protobuf\PBMessage;
 use WarshipJian\Getui\igetui\utils\GTconfig;
 use WarshipJian\Getui\igetui\IGtMessage;
-use WarshipJian\Getui\igetui\IGtAppMessage;
+use WarshipJian\Getui\igetui\IGtListMessage;
+use WarshipJian\Getui\igetui\IGtTarget;
 
-
-//require_once(dirname(__FILE__) . '/' . 'protobuf/pb_message.php');
-//require_once(dirname(__FILE__) . '/' . 'igetui/IGt.Req.php');
-//require_once(dirname(__FILE__) . '/' . 'igetui/IGt.Message.php');
-//require_once(dirname(__FILE__) . '/' . 'igetui/IGt.AppMessage.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/IGt.ListMessage.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/IGt.SingleMessage.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/IGt.Target.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.BaseTemplate.php');
 require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.LinkTemplate.php');
 require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.NotificationTemplate.php');
 require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.TransmissionTemplate.php');

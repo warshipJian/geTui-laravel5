@@ -1,4 +1,8 @@
 <?php
+
+namespace WarshipJian\Getui\exception;
+
+use Couchbase\Exception;
 /**
  * Created by PhpStorm.
  * User: Administrator

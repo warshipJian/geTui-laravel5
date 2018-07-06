@@ -1,11 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-5-9
- * Time: 下午3:12
- */
-require_once(dirname(__FILE__) . '/' . 'LogUtils.php');
+
+namespace WarshipJian\Getui\igetui\utils;
+use Couchbase\Exception;
+use WarshipJian\Getui\exception\RequestException;
+
+//require_once(dirname(__FILE__) . '/' . 'LogUtils.php');
 class HttpManager
 {
     static $curls = array();

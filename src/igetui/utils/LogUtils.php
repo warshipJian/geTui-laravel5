@@ -1,10 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-5-9
- * Time: 下午3:17
- */
+
+namespace WarshipJian\Getui\igetui\utils;
+
 class LogUtils
 {
     static $debug = true;
