@@ -230,7 +230,8 @@ abstract class PBMessage
      */
     protected function _add_arr_value($index)
     {
-        return $this->values[$index][] = new $this->fields[$index]();
+        $class_full_path = $this->get_class_full_path($index);
+        return $this->values[$index][] = new $class_full_path();
     }
 
     /**
@@ -254,6 +255,22 @@ abstract class PBMessage
     }
 
     /**
+     * get class full path
+     * @param int - index of the field
+     */
+    protected function get_class_full_path($index)
+    {
+        $class_full_path = 'WarshipJian\Getui\igetui\IGtReq\\'.$this->fields[$index];
+        if (!class_exists($class_full_path)) {
+            $class_full_path = '\WarshipJian\Getui\protobuf\type\\'.$this->fields[$index];
+            if (!class_exists($class_full_path)) {
+                throw new Exception('not found '.$this->fields[$index].' ! jian' );
+            }
+        }
+        return $class_full_path;
+    }
+
+    /**
      * Set an value
      * @param int - index of the field
      * @param Mixed value
@@ -266,7 +283,8 @@ abstract class PBMessage
         }
         else
         {
-            $this->values[$index] = new $this->fields[$index]();
+            $class_full_path = $this->get_class_full_path($index);
+            $this->values[$index] = new $class_full_path();
             $this->values[$index]->value = $value;
         }
     }

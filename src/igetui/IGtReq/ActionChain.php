@@ -11,7 +11,7 @@ class ActionChain extends PBMessage
     parent::__construct($reader);
     $this->fields["1"] = "PBInt";
     $this->values["1"] = "";
-    $this->fields["2"] = "ActionChain_Type";
+    $this->fields["2"] = "ActionChainType";
     $this->values["2"] = "";
     $this->fields["3"] = "PBInt";
     $this->values["3"] = "";
