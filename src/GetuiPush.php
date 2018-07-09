@@ -2,7 +2,6 @@
 
 namespace WarshipJian\Getui;
 
-header("Content-Type: text/html; charset=utf-8");
 
 use WarshipJian\Getui\igetui\utils\GTconfig;
 use WarshipJian\Getui\igetui\IGtMessage;

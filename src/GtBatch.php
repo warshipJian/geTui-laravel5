@@ -13,7 +13,6 @@ use WarshipJian\Getui\igetui\IGtReq\SingleBatchRequest;
  * Date: 15-4-9
  * Time: 下午3:45
  */
-header("Content-Type: text/html; charset=utf-8");
 
 class GtBatch
 {

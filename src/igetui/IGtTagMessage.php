@@ -2,7 +2,6 @@
 
 namespace WarshipJian\Getui\igetui;
 
-header("Content-Type: text/html; charset=utf-8");
 class IGtTagMessage extends IGtMessage{
 
     //array('','',..)
